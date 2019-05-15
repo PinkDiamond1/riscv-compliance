@@ -29,7 +29,6 @@ RV_COMPLIANCE_CODE_BEGIN
   TEST_CASE (2, a1, 667, \
         j 1f; \
         .align 3; \
-        data: \
           .dword 0xfedcba9876543210; \
           .dword 0xfedcba9876543210; \
         .align 12; \
@@ -153,6 +152,9 @@ RV_COMPLIANCE_CODE_END
 
   .data
 RV_COMPLIANCE_DATA_BEGIN
+data:
+  .dword 0xfedcba9876543210
+  .dword 0xfedcba9876543210
 test_res:
     .fill 48, 4, -1
 RV_COMPLIANCE_DATA_END
